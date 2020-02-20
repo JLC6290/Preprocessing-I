@@ -135,6 +135,7 @@ body {
   height: 100%;
 }
 /**========Begin styling==============**/
+/* Font import */
 /* Variables */
 /* Mixins */
 .button-class {
@@ -142,12 +143,14 @@ body {
   margin: 3%;
   width: 200px;
   height: 50px;
-  background-color: gray;
+  background-color: #5D5B5A;
   color: white;
   font-size: 1.25em;
 }
+/* main container */
 .container {
   padding: 2%;
+  font-family: 'Arimo', sans-serif;
 }
 .container nav {
   font-size: 2em;
@@ -155,10 +158,11 @@ body {
   justify-content: space-evenly;
   width: 100%;
   padding: 2%;
-  background-color: gray;
+  background-color: #5D5B5A;
 }
 .container nav a {
   color: white;
+  font-family: 'Work Sans', sans-serif;
   text-decoration: none;
   padding: 2%;
 }
@@ -210,7 +214,7 @@ body {
   margin: 3%;
   width: 200px;
   height: 50px;
-  background-color: gray;
+  background-color: #5D5B5A;
   color: white;
   font-size: 1.25em;
 }
@@ -293,7 +297,7 @@ body {
   margin: 3%;
   width: 200px;
   height: 50px;
-  background-color: gray;
+  background-color: #5D5B5A;
   color: white;
   font-size: 1.25em;
 }
@@ -301,7 +305,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: gray;
+  background-color: #5D5B5A;
   height: 20vh;
 }
 .container footer span {
