@@ -62,31 +62,157 @@ html, body {
 /* Variables */
 
 @backgroundcolor:  #d5cac7;
+@baseFontSize: 16px;
 
+/* Mixins */
+
+.button-class {
+	padding: 2%;
+	margin: 3%;
+	width: 200px;
+	height: 50px;
+	background-color: gray;
+	color: white;
+	font-size: 1.25em;
+}
 
 .container {
 	padding: 2%;
-}
+	nav {
+		font-size: 2em;
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+		padding: 2%;
+		background-color: gray;
+		a {
+			color: white;
+			text-decoration: none;
+			padding: 2%;
+			@media (max-width: 500px) {
+				background-color: gray;
+				margin: 2% 0;
+			}
+		}
+		@media (max-width: 500px) {
+			flex-direction: column;
+			text-align: center;
+			background-color: white;
+		}
+	}
+	.avatar {
+		@media (max-width: 500px) {
+			width: 80%;
+			margin: 0 10%;
+		}
+	}
+	h1 {
+		font-size: 5em;
+		margin: 2%;
+	}
+	h2 {
+		font-size: 3em;
+		margin: 2% 0;
+	}
+	li {
+		font-size: 2em;
+		padding: 1%;
+		border: 1px solid gray;
+	}
 
-header {
-	background-color:@backgroundcolor;
-	padding: 3%;
-}
-
-nav {
-	font-size: 2em;
-	display: flex;
-	justify-content: space-evenly;
-	width: 100%;
-	margin: 2%;
-}
-
-h1 {
-	font-size: 5em;
-	margin: 2%;
-}
-
-.top {
-	display: flex;
-	justify-content: space-between, space-evenly;
+	.top {
+		padding: 3%;
+		display: flex;
+		justify-content: space-between, space-evenly;
+		p {
+			font-size: 2em;
+		}
+		hr {
+			margin: 4% 0;
+		}
+		button {
+			.button-class();
+		}
+		@media (max-width: 500px) {
+			
+		}
+	}
+	.middle {
+		display: flex;
+		justify-content: space-between;
+		padding: 3%;
+		.columnOne, .columnTwo {
+			width: 48%;
+		}
+		p {
+			font-size: 2em;
+		}
+		@media (max-width: 500px) {
+			flex-direction: column;
+			.columnOne, .columnTwo {
+				width: 100%;
+			}
+		}		
+	}
+	.work {
+		width: 100%;
+	}
+	.bottom {
+		display: flex;
+		flex-direction: column;
+		padding: 3%;
+		width: 100%;
+		table {
+			font-size: 2em;
+			width: 100%;
+			tr:nth-child(even) {
+				background-color: lightgray;
+			}
+			tr {
+				padding: 2%;
+				display: table;
+				width: 100%;
+			}
+			th, td {
+				width: 25%;
+				padding: 1%;
+			}
+			th {
+				font-weight: bold;
+				text-align: left;
+			}
+			@media (max-width: 500px) {
+				font-size: 1.5em;		
+			}
+		}
+		.contact {
+			width: 50%;
+			margin: 0 25%;
+			input, textarea {
+				width: 100%;
+				margin: 1%;
+				padding: 1%;
+				border: 1px solid gray;
+				font-size: 1em;
+			}
+			@media (max-width: 500px) {
+				width: 80%;
+				margin: 0 10%;
+			}
+			button {
+				.button-class();
+			}
+		}
+	}
+	footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: gray;
+		height: 20vh;
+		span {
+			color: white;
+			font-size: 2em;
+		}
+	}
 }
